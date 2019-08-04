@@ -1,0 +1,25 @@
+﻿<Window x:Class="HW3107_ContentPresenter_FlightSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW3107_ContentPresenter_FlightSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1200">
+    <Window.Resources>
+        <DataTemplate x:Key="MyTemplate">
+            <TextBlock Text="{Binding}" 
+                       HorizontalAlignment="Left" 
+                       Margin="106,102,0,0" 
+                       VerticalAlignment="Top"/>
+        </DataTemplate>        
+    </Window.Resources>
+    
+    <Grid>
+        <ContentPresenter Content="{Binding flight}" 
+                          ContentTemplate="{StaticResource MyTemplate}">
+            
+        </ContentPresenter>
+    </Grid>
+    
+</Window>
